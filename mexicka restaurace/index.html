@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="El Corazón Auténtico — Autentická mexická restaurace. Ručně vyráběné pokrmy, živí mariachi a 80+ prémiových tequil v srdci San Antonia.">
+    <title>El Corazón Auténtico | Autentická mexická restaurace</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+
+    <!-- ===================== GOOGLE FONTS ===================== -->
+    <!-- Cinzel Decorative: ornate display font for the brand name -->
+    <!-- Cormorant Garamond: elegant serif for headings           -->
+    <!-- Lato: clean, readable body font                          -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===================== FONT AWESOME ===================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous">
+
+    <!-- ===================== STYLESHEET ======================= -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================================
+         NAVIGATION BAR
+    ================================================ -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+        <div class="nav-container">
+
+            <!-- Brand Logo -->
+            <a href="#home" class="nav-logo" aria-label="El Corazón Auténtico – Domů">
+                <i class="fas fa-pepper-hot nav-logo-icon" aria-hidden="true"></i>
+                <span class="nav-logo-text">El Corazón <em>Auténtico</em></span>
+            </a>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Přepnout navigační menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="nav-menu" role="list">
+                <li class="nav-item"><a href="#home" class="nav-link active">Domů</a></li>
+                <li class="nav-item"><a href="zazitek.html" class="nav-link">Zážitek</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                <li class="nav-item nav-cta">
+                    <a href="#reservations" class="btn-nav">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        Rezervovat stůl
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================================
+         HERO SECTION
+    ================================================ -->
+    <section id="home" class="hero" aria-label="Vítejte v El Corazón Auténtico">
+        <!-- Layered overlays for depth -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-texture" aria-hidden="true"></div>
+
+        <!-- Floating decorative shapes -->
+        <div class="hero-shapes" aria-hidden="true">
+            <div class="hero-shape hero-shape--1"></div>
+            <div class="hero-shape hero-shape--2"></div>
+            <div class="hero-shape hero-shape--3"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+
+            <h1 class="hero-title">
+                <span class="hero-title-top">Ochutnejte duši</span>
+                <span class="hero-title-bottom"><em>Mexika</em></span>
+            </h1>
+            <p class="hero-subtitle">
+                Ručně vyráběné recepty předávané po generace —<br>
+                kde každé jídlo nese teplo naší rodiny.
+            </p>
+            <div class="hero-actions">
+                <a href="#reservations" class="btn-primary">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    Rezervovat stůl
+                </a>
+                <a href="menu.html" class="btn-ghost">
+                    Naše menu
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- ─── Wave divider anchored to hero bottom ─── -->
+        <div class="brush-divider-png brush-divider-png--hero" aria-hidden="true">
+            <img src="Images/divide.svg" alt="">
+        </div>
+
+    </section>
+
+    <!-- ================================================
+         MENU HIGHLIGHTS SECTION
+    ================================================ -->
+    <section id="menu" class="menu-section" aria-label="Speciální pokrmy">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="section-header fade-in-up">
+                <span class="section-label">Naše Kuchyně</span>
+                <h2 class="section-title">Speciální pokrmy</h2>
+                <p class="section-subtitle">
+                    Každý talíř je oslavou tradice, připravený z nejčerstvějších
+                    surovin a vřelosti naší otevřené kuchyně.
+                </p>
+            </div>
+
+            <!-- 3-Column Dish Grid -->
+            <div class="menu-grid" role="list">
+
+                <!-- ── Dish 1: Tacos Al Pastor ── -->
+                <article class="menu-card fade-in-up" role="listitem">
+                    <div class="menu-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80&fit=crop"
+                            alt="Tacos Al Pastor — pomalu pečené vepřové s čerstvým ananasem" loading="lazy" width="600"
+                            height="400">
+                        <span class="menu-card__badge">Oblíbené</span>
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Tacos Al Pastor</h3>
+                        <p class="menu-card__desc">
+                            Pomalu pečené marinované vepřové na vertikálním trompu, podávané s
+                            čerstvým ananasem, koriandrem a domácí salsou verde na
+                            ručně vyráběných kukuřičných tortillách.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="spice-meter" aria-label="Spice level: 2 out of 3">
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot spice-empty" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Dish 2: Enchiladas Mole Negro ── -->
+                <article class="menu-card fade-in-up" role="listitem" style="animation-delay: 0.12s;">
+                    <div class="menu-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=600&q=80&fit=crop"
+                            alt="Enchiladas Mole Negro — kuřecí maso v omáčce mole ze 32 ingrediencí" loading="lazy"
+                            width="600" height="400">
+                        <span class="menu-card__badge menu-card__badge--featured">Specialita podniku</span>
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Enchiladas Mole Negro</h3>
+                        <p class="menu-card__desc">
+                            Křehké kuřecí enchiladas zalité naší legendární omáčkou mole negro —
+                            komplexní omáčkou ze 32 ingrediencí, tmavé čokolády a rodových
+                            koření. Smetana a queso fresco navrchu.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="spice-meter" aria-label="Spice level: 3 out of 3">
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Dish 3: Guacamole Tradicional ── -->
+                <article class="menu-card fade-in-up" role="listitem" style="animation-delay: 0.24s;">
+                    <div class="menu-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?w=600&q=80&fit=crop"
+                            alt="Tradiční Guacamole — mleté u stolu v molcajete" loading="lazy" width="600"
+                            height="400">
+                        <span class="menu-card__badge menu-card__badge--veg">Vegetariánské</span>
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Tradiční Guacamole</h3>
+                        <p class="menu-card__desc">
+                            Mleté u stolu v sopečném molcajete z avokád Hass,
+                            čerstvé limetky, koriandru, bílé cibule a jalapeña. Podáváno s
+                            čerstvě smaženými tortillovými chipsy.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="spice-meter" aria-label="Spice level: 1 out of 3">
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot spice-empty" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot spice-empty" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Dish 4: Carne Asada ── -->
+                <article class="menu-card fade-in-up" role="listitem" style="animation-delay: 0.1s;">
+                    <div class="menu-card__image-wrap">
+                        <img src="Images/Carne.jpg" alt="Carne Asada — prvotřídní skirt steak grilovaný k dokonalosti"
+                            loading="lazy" width="600" height="400">
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Carne Asada</h3>
+                        <p class="menu-card__desc">
+                            Prvotřídní skirt steak marinovaný přes noc v citrusech, česneku a
+                            bylinkách. Grilovaný na mesquite a podávaný s grilovanou jarní cibulkou,
+                            guacamole a teplými pšeničnými tortillami.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="spice-meter" aria-label="Spice level: 2 out of 3">
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot spice-empty" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Dish 5: Pozole Rojo ── -->
+                <article class="menu-card fade-in-up" role="listitem" style="animation-delay: 0.22s;">
+                    <div class="menu-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80&fit=crop"
+                            alt="Pozole Rojo — kukuřičný guláš s pomalu dušeným vepřovým masem" loading="lazy"
+                            width="600" height="400">
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Pozole Rojo</h3>
+                        <p class="menu-card__desc">
+                            Duši hřející kukuřičný guláš s pomalu dušeným vepřovým masem v bohatém
+                            vývaru z červeného chilli. Zdobené strouhaným zelím, ředkvičkou,
+                            sušeným oreganem a čerstvou limetkou. Skutečná mexická klasika.
+                        </p>
+                        <div class="menu-card__footer">
+                            <span class="spice-meter" aria-label="Spice level: 3 out of 3">
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                                <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Dish 6: Churros con Chocolate ── -->
+                <article class="menu-card fade-in-up" role="listitem" style="animation-delay: 0.34s;">
+                    <div class="menu-card__image-wrap">
+                        <img src="Images/churros.jpeg"
+                            alt="Churros s čokoládou — skořicové churros s oaxackou čokoládovou omáčkou" loading="lazy"
+                            width="600" height="400">
+                        <span class="menu-card__badge menu-card__badge--dessert">Dezert</span>
+
+                    </div>
+                    <div class="menu-card__body">
+                        <h3 class="menu-card__title">Churros s čokoládou</h3>
+                        <p class="menu-card__desc">
+                            Zlatavé, křupavé churros obalené ve skořicovém cukru. Podávané s
+                            bohatou oaxackou horkou čokoládovou omáčkou a domácím
+                            vanilkovým karamelem cajeta.
+                        </p>
+
+                    </div>
+                </article>
+
+            </div><!-- /.menu-grid -->
+
+            <!-- View Full Menu CTA -->
+            <div class="menu-footer fade-in-up">
+                <a href="menu.html" class="btn-outline">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    Zobrazit celé menu
+                </a>
+            </div>
+
+        </div><!-- /.container -->
+    </section>
+
+
+    <!-- ================================================
+         EXPERIENCE SECTION
+    ================================================ -->
+    <section id="experience" class="experience-section" aria-label="Zážitek v El Corazón Auténtico">
+        <!-- Decorative tile-inspired background pattern -->
+        <div class="experience-pattern" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="section-header section-header--light fade-in-up">
+                <span class="section-label section-label--light">Více než jen jídlo</span>
+                <h2 class="section-title">Zážitek</h2>
+                <p class="section-subtitle">
+                    Vstupte do našich dveří a nechte své smysly cestovat přímo
+                    do srdce Mexika.
+                </p>
+            </div>
+
+            <!-- Experience Cards -->
+            <div class="experience-grid">
+
+                <!-- Experience 1: Handmade Tortillas -->
+                <div class="exp-card fade-in-up">
+                    <div class="exp-card__image-wrap">
+                        <img src="Images/tortily.webp" alt="Kuchařka lisující ručně vyráběné kukuřičné tortilly"
+                            loading="lazy" width="700" height="500">
+                        <div class="exp-card__icon-badge" aria-hidden="true">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                    </div>
+                    <div class="exp-card__body">
+                        <h3>Ručně vyráběné tortilly</h3>
+                        <p>
+                            Každá tortilla je ručně lisována z masa nixtamalizada —
+                            prastaré techniky, která mění sušenou kukuřici na živé,
+                            dýchající těsto. Sledujte naše kuchařky při práci v otevřené
+                            kuchyni, jak naplňují prostor vůní čerstvé kukuřice.
+                        </p>
+                        <span class="exp-card__detail">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            Čerstvé každé ráno
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Live Mariachi (featured, larger) -->
+                <div class="exp-card exp-card--featured fade-in-up" style="animation-delay: 0.18s;">
+                    <div class="exp-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=700&q=80&fit=crop"
+                            alt="Živé vystoupení mariachi v restauraci" loading="lazy" width="700" height="500">
+                        <div class="exp-card__icon-badge exp-card__icon-badge--featured" aria-hidden="true">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                    <div class="exp-card__body">
+                        <h3>Noci s živým Mariachi</h3>
+                        <p>
+                            Každý pátek a sobotu večer náš milovaný mariachi ansámbl
+                            naplní restauraci nadčasovými písněmi lásky, touhy a
+                            oslav. Nechte se houslemi, trumpetami a guitarrónem přenést
+                            přímo na náměstí kdesi v Jalisku.
+                        </p>
+                        <span class="exp-card__detail">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            Pá &amp; So · 19:00 – 22:00
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Tequila Bar -->
+                <div class="exp-card fade-in-up" style="animation-delay: 0.36s;">
+                    <div class="exp-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?w=700&q=80&fit=crop"
+                            alt="Výběr prémiové tequily a mezcalu na našem baru" loading="lazy" width="700"
+                            height="500">
+                        <div class="exp-card__icon-badge" aria-hidden="true">
+                            <i class="fas fa-wine-glass-alt"></i>
+                        </div>
+                    </div>
+                    <div class="exp-card__body">
+                        <h3>Artisanal Tequila Bar</h3>
+                        <p>
+                            Naše kurátorská sbírka obsahuje více než 80 prémiových tequil a
+                            mezcalů — od hedvábných blancos po stařené añejos, které se
+                            vyrovnají nejlepším koňakům. Naši experti míchají koktejly,
+                            které jsou uměním samy o sobě.
+                        </p>
+                        <span class="exp-card__detail">
+                            <i class="fas fa-glass-whiskey" aria-hidden="true"></i>
+                            80+ Prémiových destilátů
+                        </span>
+                    </div>
+                </div>
+
+            </div><!-- /.experience-grid -->
+
+
+
+        </div><!-- /.container -->
+    </section>
+
+
+    <!-- ================================================
+         RESERVATIONS SECTION
+    ================================================ -->
+    <section id="reservations" class="booking-section" aria-label="Vytvořit rezervaci">
+        <div class="booking-wrapper">
+
+            <!-- Left: Atmospheric image panel -->
+            <div class="booking-panel booking-panel--image" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop"
+                    alt="Příjemně osvětlený interiér restaurace" loading="lazy" width="900" height="1200">
+                <div class="booking-panel__overlay">
+                    <blockquote class="booking-quote">
+                        <p>"Jídlo je nejpřímější způsob, jak se spojit se srdcem kultury."</p>
+                        <cite>— Chef María Esperanza</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Right: Reservation form -->
+            <div class="booking-panel booking-panel--form">
+                <div class="booking-form-content">
+
+                    <span class="section-label">Rezervace</span>
+                    <h2 class="section-title">Rezervujte si svůj stůl</h2>
+                    <p class="booking-intro">
+                        Připojte se k nám pro nezapomenutelný večer. Vyplňte údaje a
+                        my vám rezervaci potvrdíme do 24 hodin.
+                    </p>
+
+                    <!-- ── Success Message (hidden until form submitted) ── -->
+                    <div class="form-success" id="form-success" role="alert" aria-live="polite" aria-atomic="true">
+                        <div class="form-success__icon" aria-hidden="true">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>¡Muchas Gracias!</h3>
+                        <p>
+                            Vaše rezervace byla přijata. Brzy vám pošleme potvrzení
+                            na e-mail. <em>¡Nos vemos pronto!</em>
+                        </p>
+                        <button class="btn-primary" id="new-reservation-btn" type="button">
+                            <i class="fas fa-redo" aria-hidden="true"></i>
+                            Vytvořit další rezervaci
+                        </button>
+                    </div>
+
+                    <!-- ── Booking Form ── -->
+                    <form class="booking-form" id="booking-form" novalidate aria-label="Rezervační formulář">
+
+                        <!-- Row 1: Name -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">
+                                    Jméno
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="first-name" name="first-name" placeholder="Pavel"
+                                    autocomplete="given-name" required aria-describedby="first-name-error">
+                                <span class="field-error" id="first-name-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">
+                                    Příjmení
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Fuxa"
+                                    autocomplete="family-name" required aria-describedby="last-name-error">
+                                <span class="field-error" id="last-name-error" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Contact -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">
+                                    E-mailová adresa
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="fuxa@fuxastudio.cz"
+                                    autocomplete="email" required aria-describedby="email-error">
+                                <span class="field-error" id="email-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefonní číslo</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+420 000 000 000"
+                                    autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Date, Time, Guests -->
+                        <div class="form-row form-row--three">
+                            <div class="form-group">
+                                <label for="res-date">
+                                    Datum
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="date" id="res-date" name="res-date" required aria-describedby="date-error">
+                                <span class="field-error" id="date-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-time">
+                                    Čas
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <select id="res-time" name="res-time" required aria-describedby="time-error">
+                                    <option value="">Vyberte čas</option>
+                                    <optgroup label="Oběd">
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                    </optgroup>
+                                    <optgroup label="Večeře">
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="21:00">21:00</option>
+                                    </optgroup>
+                                </select>
+                                <span class="field-error" id="time-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">
+                                    Hosté
+                                    <span class="required" aria-label="required">*</span>
+                                </label>
+                                <select id="guests" name="guests" required aria-describedby="guests-error">
+                                    <option value="">Vybrat</option>
+                                    <option value="1">1 host</option>
+                                    <option value="2">2 hosté</option>
+                                    <option value="3">3 hosté</option>
+                                    <option value="4">4 hosté</option>
+                                    <option value="5">5 hostů</option>
+                                    <option value="6">6 hostů</option>
+                                    <option value="7+">7+ hostů</option>
+                                </select>
+                                <span class="field-error" id="guests-error" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-group form-group--full">
+                            <label for="requests">Speciální přání</label>
+                            <textarea id="requests" name="requests" rows="3"
+                                placeholder="Dietní omezení, oslavy, preference místa k sezení, alergie..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-primary btn-submit" id="submit-btn">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                            Potvrdit rezervaci
+                        </button>
+
+                    </form><!-- /#booking-form -->
+                </div>
+            </div>
+        </div><!-- /.booking-wrapper -->
+    </section>
+
+    <!-- ================================================
+         FOOTER
+    ================================================ -->
+    <footer id="contact" class="footer" role="contentinfo">
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Brand Column -->
+                    <div class="footer-col footer-col--brand">
+                        <a href="index.html" class="footer-logo" aria-label="Zpět na hlavní stránku">
+                            <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                            <span>El Corazón <em>Auténtico</em></span>
+                        </a>
+                        <p class="footer-tagline">
+                            Kde každé jídlo nese teplo duše Mexika
+                            a lásku naší rodinné kuchyně.
+                        </p>
+                        <nav aria-label="Odkazy na sociální sítě">
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Navštivte náš Facebook">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Navštivte náš Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!-- Find Us Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Kde nás najdete</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <address>Jiráskova 2664<br>530 02 Pardubice I</address>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel: +420 736 131 410">+420 736 131 410 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:fuxa@fuxastudio.cz">fuxa@fuxastudio.cz</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Opening Hours Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Otevírací doba</h4>
+                        <ul class="footer-hours">
+                            <li>
+                                <span class="hours-day">Po – Čt</span>
+                                <span class="hours-time">11:30 – 22:00</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Pátek</span>
+                                <span class="hours-time">11:30 – 23:30</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Sobota</span>
+                                <span class="hours-time">10:00 – 23:30</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Neděle</span>
+                                <span class="hours-time">10:00 – 21:00</span>
+                            </li>
+                        </ul>
+                        <p class="footer-brunch-note">
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                            Víkendový Brunch: 10:00 – 14:00
+                        </p>
+                    </div>
+
+                </div><!-- /.footer-grid -->
+            </div>
+        </div><!-- /.footer-main -->
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-copy">
+                    &copy; 2026 El Corazón Auténtico. Vytvořil <a href="https://fuxastudio.cz/">FuxaStudio</a>
+                </p>
+                <nav aria-label="Právní odkazy">
+                    <div class="footer-legal-links">
+                        <a href="#">Ochrana soukromí</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="#">Smluvní podmínky</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- ================================================
+         BACK TO TOP BUTTON
+    ================================================ -->
+    <button class="back-to-top" id="back-to-top" aria-label="Zpět na začátek stránky" title="Zpět nahoru">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Sticky mobile CTA bar -->
+    <div class="sticky-cta sticky-cta--hidden" id="sticky-cta" aria-label="Rychlé akce">
+        <a href="tel:+420736131410" class="sticky-cta__btn sticky-cta__btn--phone" aria-label="Zavolat nám">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Zavolat</span>
+        </a>
+        <a href="#reservations" class="sticky-cta__btn sticky-cta__btn--reserve">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span>Rezervovat</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

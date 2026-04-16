@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jídelní lístek El Corazón Auténtico — autentické mexické pokrmy připravené z čerstvých surovin. Předkrmy, tacos, hlavní chody, dezerty a nápoje.">
+    <title>Jídelní lístek | El Corazón Auténtico</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- ================================================
+         NAVIGATION BAR
+    ================================================ -->
+    <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Hlavní navigace">
+        <div class="nav-container">
+
+            <a href="index.html" class="nav-logo" aria-label="El Corazón Auténtico – Domů">
+                <i class="fas fa-pepper-hot nav-logo-icon" aria-hidden="true"></i>
+                <span class="nav-logo-text">El Corazón <em>Auténtico</em></span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Přepnout navigační menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu" role="list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Domů</a></li>
+                <li class="nav-item"><a href="zazitek.html" class="nav-link">Zážitek</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                <li class="nav-item nav-cta">
+                    <a href="index.html#reservations" class="btn-nav">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        Rezervovat stůl
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- ================================================
+         MENU HERO
+    ================================================ -->
+    <header class="menu-hero" aria-label="Náš jídelní lístek">
+        <div class="menu-hero-overlay" aria-hidden="true"></div>
+        <div class="menu-hero-content">
+
+            <h1 class="menu-hero-title">Náš Jídelní Lístek</h1>
+            <p class="menu-hero-subtitle">
+                Každý pokrm je poctivě připraven ze čerstvých surovin —
+                recepty předávané po generace z rodinné kuchyně Oaxacy.
+            </p>
+        </div>
+    </header>
+
+
+    <!-- ================================================
+         CATEGORY NAVIGATION (tabs)
+    ================================================ -->
+    <nav class="category-nav" id="category-nav" aria-label="Kategorie jídelního lístku" role="tablist">
+        <div class="category-nav__inner">
+            <a href="#predkrmy" class="category-nav__link active" data-section="predkrmy" role="tab"
+                aria-selected="true" aria-controls="predkrmy">
+                <i class="fas fa-leaf" aria-hidden="true"></i>
+                Předkrmy
+            </a>
+            <a href="#tacos" class="category-nav__link" data-section="tacos" role="tab" aria-selected="false"
+                aria-controls="tacos">
+                <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+                Tacos
+            </a>
+            <a href="#hlavni-chody" class="category-nav__link" data-section="hlavni-chody" role="tab"
+                aria-selected="false" aria-controls="hlavni-chody">
+                <i class="fas fa-utensils" aria-hidden="true"></i>
+                Hlavní chody
+            </a>
+            <a href="#dezerty" class="category-nav__link" data-section="dezerty" role="tab" aria-selected="false"
+                aria-controls="dezerty">
+                <i class="fas fa-ice-cream" aria-hidden="true"></i>
+                Dezerty
+            </a>
+            <a href="#napoje" class="category-nav__link" data-section="napoje" role="tab" aria-selected="false"
+                aria-controls="napoje">
+                <i class="fas fa-wine-glass" aria-hidden="true"></i>
+                Nápoje
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- ================================================
+         MENU PAGE CONTENT
+    ================================================ -->
+    <main class="menu-page" id="menu-main">
+        <div class="menu-page__inner">
+
+
+            <!-- ══════════════════════════════════════════
+                 TAB: PŘEDKRMY
+            ══════════════════════════════════════════ -->
+            <section id="predkrmy" class="menu-section-block is-active" role="tabpanel" aria-label="Předkrmy">
+
+                <!-- Daily Special -->
+                <div class="daily-special">
+                    <div class="daily-special__image">
+                        <img src="Images/special-starter.png"
+                            alt="Denní nabídka předkrmů — Ceviche de Pescado Tradicional" loading="eager" width="800"
+                            height="600">
+                    </div>
+                    <div class="daily-special__body">
+                        <span class="daily-special__label">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Denní nabídka · Předkrmy
+                        </span>
+                        <h2 class="daily-special__title">Quesadillas de Flor de Calabaza</h2>
+                        <p class="daily-special__desc">
+                            Ručně vyráběné kukuřičné placky plněné rozpuštěným sýrem Oaxaca,
+                            křehkými květy tykve, česnekem a epazote. Tradiční pochoutka
+                            ze srdce centrálního Mexika podávaná s čerstvou salsou.
+                        </p>
+                        <div class="daily-special__footer">
+                            <span class="daily-special__price">245 Kč</span>
+                            <span class="daily-special__badge">
+                                <i class="fas fa-fire" aria-hidden="true"></i>
+                                Doporučujeme
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section heading -->
+                <div class="menu-section-heading">
+                    <div class="menu-section-heading__icon" aria-hidden="true">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h2 class="menu-section-heading__text">Předkrmy</h2>
+                    <span class="menu-section-heading__count">5 pokrmů</span>
+                </div>
+
+                <ul class="menu-items-list" role="list">
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Nachos Supreme</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">185 Kč</span>
+                        <p class="menu-item__desc">
+                            Čerstvě smažené tortillové chipsy s rozpuštěným sýrem Monterey Jack,
+                            jalapeños, pico de gallo, smetanou a domácím guacamole.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Quesadillas de Queso</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">175 Kč</span>
+                        <p class="menu-item__desc">
+                            Zlatavě opečené pšeničné tortilly plněné směsí Oaxaca a Chihuahua sýrů.
+                            Podávané s pico de gallo, guacamole a chipotle salsou.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Guacamole Tradicional</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">155 Kč</span>
+                        <p class="menu-item__desc">
+                            Mleto přímo u stolu v sopečném molcajete z avokád Hass, čerstvé limetky,
+                            koriandru, bílé cibule a jalapeña. S čerstvě smaženými chipsy.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Elotes — Pečená kukuřice</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">125 Kč</span>
+                        <p class="menu-item__desc">
+                            Pečená kukuřice potřená majonézou, posypaná cotija sýrem, chilli
+                            práškem a čerstvou limetkou — oblíbená mexická pouliční pochoutka.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Sopa de Tortilla</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">145 Kč</span>
+                        <p class="menu-item__desc">
+                            Tradiční polévka z pečených tomátů, chipotle chilli a česneku,
+                            ozdobená křupavými tortillovými proužky, avokádem a queso fresco.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!-- ══════════════════════════════════════════
+                 TAB: TACOS
+            ══════════════════════════════════════════ -->
+            <section id="tacos" class="menu-section-block" role="tabpanel" aria-label="Tacos">
+
+                <!-- Daily Special -->
+                <div class="daily-special">
+                    <div class="daily-special__image">
+                        <img src="Images/special-taco.png" alt="Denní nabídka tacos — Taco de Pulpo al Pastor"
+                            loading="lazy" width="800" height="600">
+                    </div>
+                    <div class="daily-special__body">
+                        <span class="daily-special__label">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Denní nabídka · Tacos
+                        </span>
+                        <h2 class="daily-special__title">Tacos de Cochinita Pibil</h2>
+                        <p class="daily-special__desc">
+                            Pomalu pečené vepřové plecko marinované v achiote a citrusové šťávě,
+                            tradičně připravované v banánových listech. Podávané s nakládanou
+                            červenou cibulí a habanero salsou na domácích tortillách.
+                        </p>
+                        <div class="daily-special__footer">
+                            <span class="daily-special__price">225 Kč</span>
+                            <span class="daily-special__badge">
+                                <i class="fas fa-fire" aria-hidden="true"></i>
+                                Doporučujeme
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section heading -->
+                <div class="menu-section-heading">
+                    <div class="menu-section-heading__icon" aria-hidden="true">
+                        <i class="fas fa-circle-half-stroke"></i>
+                    </div>
+                    <h2 class="menu-section-heading__text">Tacos</h2>
+                    <span class="menu-section-heading__count">5 druhů · 2 ks</span>
+                </div>
+
+                <ul class="menu-items-list" role="list">
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tacos Al Pastor</h3>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">185 Kč</span>
+                        <p class="menu-item__desc">
+                            Pomalu pečené marinované vepřové na vertikálním trompu,
+                            s čerstvým ananasem, koriandrem a domácí salsou verde
+                            na ručně vyráběných kukuřičných tortillách.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tacos de Barbacoa</h3>
+                            <span class="diet-badge diet-badge--spicy-hot" aria-label="Velmi pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">195 Kč</span>
+                        <p class="menu-item__desc">
+                            Hovězí líčka dušená po celý den s guajillo a ancho chilli,
+                            česnekem a oreganem. S bílou cibulí, koriandrem a salsou roja.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tacos de Carnitas</h3>
+                        </div>
+                        <span class="menu-item__price">185 Kč</span>
+                        <p class="menu-item__desc">
+                            Vepřové maso pomalu konfitované v loji se citrusovou kůrou
+                            a skořicí dokud není zlatavé a křupavé. S cibulí, koriandrem
+                            a limetkovými klínky.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tacos de Camarones</h3>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">215 Kč</span>
+                        <p class="menu-item__desc">
+                            Grilované tygří krevety marinované v chilli de árbol, česneku
+                            a limetce, podávané s kapustovým salátem, mango salsou a chipotle crémou.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tacos de Verduras</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">165 Kč</span>
+                        <p class="menu-item__desc">
+                            Sezonní zelenina pečená na grilu — cuketa, paprika a houby portobello —
+                            s černými fazolemi, avokádem a salsa verde. Veganská možnost.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!-- ══════════════════════════════════════════
+                 TAB: HLAVNÍ CHODY
+            ══════════════════════════════════════════ -->
+            <section id="hlavni-chody" class="menu-section-block" role="tabpanel" aria-label="Hlavní chody">
+
+                <!-- Daily Special -->
+                <div class="daily-special">
+                    <div class="daily-special__image">
+                        <img src="Images/special-main.png" alt="Denní nabídka hlavních chodů — Mole Amarillo con Pato"
+                            loading="lazy" width="800" height="600">
+                    </div>
+                    <div class="daily-special__body">
+                        <span class="daily-special__label">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Denní nabídka · Hlavní chody
+                        </span>
+                        <h2 class="daily-special__title">Mole Amarillo con Pato</h2>
+                        <p class="daily-special__desc">
+                            Konfitované kachní stehno v tradičním žlutém mole z Oaxacy —
+                            chilhuacle amarillo, tomatillos, čerstvé bylinky a epazote.
+                            Podávané s tamalito z listů banánovníku a černou rýží.
+                        </p>
+                        <div class="daily-special__footer">
+                            <span class="daily-special__price">395 Kč</span>
+                            <span class="daily-special__badge">
+                                <i class="fas fa-fire" aria-hidden="true"></i>
+                                Doporučujeme
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section heading -->
+                <div class="menu-section-heading">
+                    <div class="menu-section-heading__icon" aria-hidden="true">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h2 class="menu-section-heading__text">Hlavní chody</h2>
+                    <span class="menu-section-heading__count">5 pokrmů</span>
+                </div>
+
+                <ul class="menu-items-list" role="list">
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Enchiladas Mole Negro</h3>
+                            <span class="diet-badge diet-badge--spicy-hot" aria-label="Velmi pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">325 Kč</span>
+                        <p class="menu-item__desc">
+                            Kuřecí enchiladas zalité legendární omáčkou mole negro ze 32 ingrediencí,
+                            tmavé čokolády a rodových koření. Smetana a queso fresco navrchu.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Fajitas Mixtas</h3>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">345 Kč</span>
+                        <p class="menu-item__desc">
+                            Grilovaný skirt steak, kuřecí prsa a krevety s restovanou cibulí
+                            a paprikou na syčícím pánvi. S tortillami, guacamole, smetanou
+                            a čerstvou salsou.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Chile Relleno</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                            <span class="diet-badge diet-badge--spicy" aria-label="Mírně pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">295 Kč</span>
+                        <p class="menu-item__desc">
+                            Poblano chilli plněné ricottou, černými fazolemi a queso fresco,
+                            obalené ve vzdušném vajíčkovém těstíčku, smažené dozlatova
+                            a přelité ranchera salsou.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Carne Asada</h3>
+                        </div>
+                        <span class="menu-item__price">365 Kč</span>
+                        <p class="menu-item__desc">
+                            Prvotřídní skirt steak marinovaný přes noc v citrusech, česneku
+                            a bylinkách. Grilovaný na mesquite, podávaný s grilovanou
+                            jarní cibulkou, guacamole a teplými pšeničnými tortillami.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Pozole Rojo</h3>
+                            <span class="diet-badge diet-badge--spicy-hot" aria-label="Velmi pálivé">
+                                <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                            </span>
+                        </div>
+                        <span class="menu-item__price">285 Kč</span>
+                        <p class="menu-item__desc">
+                            Tradiční kukuřičný guláš s pomalu dušeným vepřovým masem
+                            v bohatém vývaru z červeného chilli. Se strouhaným zelím,
+                            ředkvičkou, oreganem a čerstvou limetkou.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!-- ══════════════════════════════════════════
+                 TAB: DEZERTY
+            ══════════════════════════════════════════ -->
+            <section id="dezerty" class="menu-section-block" role="tabpanel" aria-label="Dezerty">
+
+                <!-- Daily Special -->
+                <div class="daily-special">
+                    <div class="daily-special__image">
+                        <img src="Images/special-dessert.png" alt="Denní nabídka dezertů — Pastel de Elote con Cajeta"
+                            loading="lazy" width="800" height="600">
+                    </div>
+                    <div class="daily-special__body">
+                        <span class="daily-special__label">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Denní nabídka · Dezerty
+                        </span>
+                        <h2 class="daily-special__title">Pastel de Elote con Cajeta</h2>
+                        <p class="daily-special__desc">
+                            Jemný dort z čerstvé kukuřice s ricottou, citronovou kůrou a mátou,
+                            přelitý domácím karamelem cajeta z kozího mléka a posypaný
+                            vločkami mořské soli. Sladko-slaná dokonalost.
+                        </p>
+                        <div class="daily-special__footer">
+                            <span class="daily-special__price">165 Kč</span>
+                            <span class="daily-special__badge">
+                                <i class="fas fa-fire" aria-hidden="true"></i>
+                                Doporučujeme
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section heading -->
+                <div class="menu-section-heading">
+                    <div class="menu-section-heading__icon" aria-hidden="true">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h2 class="menu-section-heading__text">Dezerty</h2>
+                    <span class="menu-section-heading__count">3 dezerty</span>
+                </div>
+
+                <ul class="menu-items-list" role="list">
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Churros con Chocolate</h3>
+                        </div>
+                        <span class="menu-item__price">145 Kč</span>
+                        <p class="menu-item__desc">
+                            Zlatavé, křupavé churros obalené ve skořicovém cukru, podávané
+                            s bohatou oaxackou horkou čokoládovou omáčkou a domácím
+                            vanilkovým karamelem cajeta.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tres Leches</h3>
+                        </div>
+                        <span class="menu-item__price">155 Kč</span>
+                        <p class="menu-item__desc">
+                            Jemný piškotový dortíček nasáklý trojicí mléka —
+                            plnotučným, kondenzovaným a smetanou — zdobený šlehačkou
+                            a čerstvými lesními plody.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Flan de Vainilla</h3>
+                        </div>
+                        <span class="menu-item__price">135 Kč</span>
+                        <p class="menu-item__desc">
+                            Klasický mexický karamelový pudink z vanilky madagaskarského původu,
+                            pomalu pečený ve vodní lázni. Podávaný s karamelovou omáčkou
+                            a čerstvou mátou.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!-- ══════════════════════════════════════════
+                 TAB: NÁPOJE
+            ══════════════════════════════════════════ -->
+            <section id="napoje" class="menu-section-block" role="tabpanel" aria-label="Nápoje">
+
+                <!-- Daily Special -->
+                <div class="daily-special">
+                    <div class="daily-special__image">
+                        <img src="Images/special-drink.png" alt="Denní nabídka nápojů — Mezcal Negroni Especial"
+                            loading="lazy" width="800" height="600">
+                    </div>
+                    <div class="daily-special__body">
+                        <span class="daily-special__label">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            Denní nabídka · Nápoje
+                        </span>
+                        <h2 class="daily-special__title">Mezcal Negroni Especial</h2>
+                        <p class="daily-special__desc">
+                            Artisanal Negroni s Banhez Mezcalem, Campari, sweet vermouth
+                            a kapkou mole bitters. Uzená sůl na okraji sklenic a ozdoba
+                            z pomerančové kůry. Sofistikovaný a nezapomenutelný.
+                        </p>
+                        <div class="daily-special__footer">
+                            <span class="daily-special__price">215 Kč</span>
+                            <span class="daily-special__badge">
+                                <i class="fas fa-fire" aria-hidden="true"></i>
+                                Doporučujeme
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section heading -->
+                <div class="menu-section-heading">
+                    <div class="menu-section-heading__icon" aria-hidden="true">
+                        <i class="fas fa-wine-glass"></i>
+                    </div>
+                    <h2 class="menu-section-heading__text">Nápoje</h2>
+                    <span class="menu-section-heading__count">Bar &amp; Nealkohol.</span>
+                </div>
+
+                <div class="menu-items-list">
+
+                    <p class="menu-sub-label">
+                        <i class="fas fa-glass-whiskey" aria-hidden="true"></i>
+                        Tequila &amp; Mezcal
+                    </p>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tequila Flight — Blanco</h3>
+                        </div>
+                        <span class="menu-item__price">295 Kč</span>
+                        <p class="menu-item__desc">
+                            Ochutnávka tří prémiových blanco tequil (3 × 40 ml): Patrón Silver,
+                            Herradura Plata, Espolòn Blanco. S limetkou a sůlí.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Tequila Flight — Añejo</h3>
+                        </div>
+                        <span class="menu-item__price">395 Kč</span>
+                        <p class="menu-item__desc">
+                            Stařené ušlechtilé tequily (3 × 40 ml): Don Julio Añejo,
+                            Clase Azul Reposado, El Tesoro Añejo. Pro skutečné znalce.
+                        </p>
+                    </li>
+
+                    <p class="menu-sub-label">
+                        <i class="fas fa-cocktail" aria-hidden="true"></i>
+                        Koktejly
+                    </p>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Margarita Clásica</h3>
+                        </div>
+                        <span class="menu-item__price">185 Kč</span>
+                        <p class="menu-item__desc">
+                            Patrón Silver, čerstvá limetková šťáva, Cointreau, agávový nektar.
+                            Na skleničce sůl s chilli. On the rocks nebo zmražená.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Margarita de Mango</h3>
+                        </div>
+                        <span class="menu-item__price">195 Kč</span>
+                        <p class="menu-item__desc">
+                            Čerstvé mangové pyré, Espolòn Blanco, čerstvá limetka,
+                            chilli tinktura a slaný okraj. Tropická a osvěžující.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Paloma</h3>
+                        </div>
+                        <span class="menu-item__price">175 Kč</span>
+                        <p class="menu-item__desc">
+                            Tequila Reposado, čerstvá grapefruitová šťáva, limetka,
+                            sůl a grepová limonáda. Lehký mexický klasik.
+                        </p>
+                    </li>
+
+                    <p class="menu-sub-label">
+                        <i class="fas fa-droplet" aria-hidden="true"></i>
+                        Aguas Frescas &amp; Nealko
+                    </p>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Horchata</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">75 Kč</span>
+                        <p class="menu-item__desc">
+                            Tradiční rýžový nápoj s mandlemi, skořicí a vanilkou.
+                            Jemně nasládlý a osvěžující — ideální k pálivým jídlům.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Agua de Jamaica</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">65 Kč</span>
+                        <p class="menu-item__desc">
+                            Chladný louh ze sušených kvítků ibišku s třtinovým cukrem
+                            a limetkou. Rubínově červený a přirozeně antioxidantový.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Agua de Tamarindo</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">65 Kč</span>
+                        <p class="menu-item__desc">
+                            Kyselkavě-sladký nápoj z tamarindové pasty, třtinového cukru
+                            a limetky. Oblíbená mexická limonáda s výraznou chutí.
+                        </p>
+                    </li>
+
+                    <li class="menu-item" role="listitem">
+                        <div class="menu-item__header">
+                            <h3 class="menu-item__name">Café de Olla</h3>
+                            <span class="diet-badge diet-badge--veg" aria-label="Vegetariánské">V</span>
+                        </div>
+                        <span class="menu-item__price">85 Kč</span>
+                        <p class="menu-item__desc">
+                            Tradiční mexická káva vařená v hliněném hrnci se skořicí,
+                            piloncillo a hřebíčkem. Voňavá, hřejivá a plná chuti.
+                        </p>
+                    </li>
+
+                </div>
+            </section>
+
+
+            <!-- Legend -->
+            <div class="menu-legend" role="note" aria-label="Legenda ikon">
+                <span class="menu-legend__title">Legenda:</span>
+                <span class="menu-legend__item">
+                    <span class="diet-badge diet-badge--veg" aria-hidden="true">V</span>
+                    Vegetariánské
+                </span>
+                <span class="menu-legend__item">
+                    <span class="diet-badge diet-badge--spicy" aria-hidden="true">
+                        <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                    </span>
+                    Mírně pálivé
+                </span>
+                <span class="menu-legend__item">
+                    <span class="diet-badge diet-badge--spicy-hot" aria-hidden="true">
+                        <i class="fas fa-pepper-hot" style="font-size:0.55rem"></i>
+                    </span>
+                    Velmi pálivé
+                </span>
+                <span class="menu-legend__item"
+                    style="margin-left:auto; font-size:0.8rem; font-style:italic; color:var(--text-muted)">
+                    Ceny jsou uvedeny včetně DPH.
+                </span>
+            </div>
+
+        </div><!-- /.menu-page__inner -->
+    </main>
+
+
+    <!-- ================================================
+         FOOTER
+    ================================================ -->
+    <footer id="contact" class="footer" role="contentinfo">
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Brand Column -->
+                    <div class="footer-col footer-col--brand">
+                        <a href="index.html" class="footer-logo" aria-label="Zpět na hlavní stránku">
+                            <i class="fas fa-pepper-hot" aria-hidden="true"></i>
+                            <span>El Corazón <em>Auténtico</em></span>
+                        </a>
+                        <p class="footer-tagline">
+                            Kde každé jídlo nese teplo duše Mexika
+                            a lásku naší rodinné kuchyně.
+                        </p>
+                        <nav aria-label="Odkazy na sociální sítě">
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Navštivte náš Facebook">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Navštivte náš Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!-- Find Us Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Kde nás najdete</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <address>Jiráskova 2664<br>530 02 Pardubice I</address>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel: +420 736 131 410">+420 736 131 410 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:fuxa@fuxastudio.cz">fuxa@fuxastudio.cz</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Opening Hours Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Otevírací doba</h4>
+                        <ul class="footer-hours">
+                            <li>
+                                <span class="hours-day">Po – Čt</span>
+                                <span class="hours-time">11:30 – 22:00</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Pátek</span>
+                                <span class="hours-time">11:30 – 23:30</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Sobota</span>
+                                <span class="hours-time">10:00 – 23:30</span>
+                            </li>
+                            <li>
+                                <span class="hours-day">Neděle</span>
+                                <span class="hours-time">10:00 – 21:00</span>
+                            </li>
+                        </ul>
+                        <p class="footer-brunch-note">
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                            Víkendový Brunch: 10:00 – 14:00
+                        </p>
+                    </div>
+
+                </div><!-- /.footer-grid -->
+            </div>
+        </div><!-- /.footer-main -->
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-copy">
+                    &copy; 2026 El Corazón Auténtico. Vytvořil <a href="https://fuxastudio.cz/">FuxaStudio</a>
+                </p>
+                <nav aria-label="Právní odkazy">
+                    <div class="footer-legal-links">
+                        <a href="#">Ochrana soukromí</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="#">Smluvní podmínky</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ================================================
+         BACK TO TOP BUTTON
+    ================================================ -->
+    <button class="back-to-top" id="back-to-top" aria-label="Zpět na začátek stránky" title="Zpět nahoru">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+
+    <!-- ================================================
+         JAVASCRIPT
+    ================================================ -->
+    <!-- Sticky mobile CTA bar -->
+    <div class="sticky-cta sticky-cta--hidden" id="sticky-cta" aria-label="Rychlé akce">
+        <a href="tel:+420736131410" class="sticky-cta__btn sticky-cta__btn--phone" aria-label="Zavolat nám">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Zavolat</span>
+        </a>
+        <a href="index.html#reservations" class="sticky-cta__btn sticky-cta__btn--reserve">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span>Rezervovat</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        'use strict';
+
+        /* ── Tab switching ── */
+        (function initTabs() {
+            const catLinks = document.querySelectorAll('.category-nav__link');
+            const panels = document.querySelectorAll('.menu-section-block');
+
+            catLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.section;
+
+                    /* Update tab active state */
+                    catLinks.forEach(l => {
+                        l.classList.remove('active');
+                        l.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    /* Show only the matching panel */
+                    panels.forEach(p => p.classList.remove('is-active'));
+                    const activePanel = document.getElementById(targetId);
+                    if (activePanel) activePanel.classList.add('is-active');
+
+                    /* Scroll to top of menu content smoothly */
+                    document.getElementById('menu-main').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        })();
+
+        /* ── Navbar always solid on menu page ── */
+        (function solidNav() {
+            const nb = document.getElementById('navbar');
+            if (nb) nb.classList.add('scrolled');
+        })();
+    </script>
+
+</body>
+
+</html>

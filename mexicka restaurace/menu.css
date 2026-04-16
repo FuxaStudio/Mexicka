@@ -1,0 +1,540 @@
+/* =========================================================
+   EL CORAZÓN AUTÉNTICO — Menu Page Stylesheet (menu.css)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   MENU HERO (smaller than index hero)
+   --------------------------------------------------------- */
+.menu-hero {
+    position: relative;
+    min-height: 42vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('Images/hero-menu.png');
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    padding-top: var(--nav-height);
+}
+
+.menu-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+        rgba(10, 5, 0, 0.80) 0%,
+        rgba(40, 12, 0, 0.72) 60%,
+        rgba(10, 5, 0, 0.78) 100%);
+    z-index: 1;
+}
+
+.menu-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--space-xl) var(--container-pad) var(--space-xxl);
+    max-width: 700px;
+}
+
+.menu-hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: var(--space-sm);
+    display: block;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.menu-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 7vw, 4.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.35s forwards;
+}
+
+.menu-hero-subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+    max-width: 560px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.5s forwards;
+}
+
+/* Wave divider anchored to hero bottom */
+.menu-hero-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    height: 60px;
+    line-height: 0;
+    font-size: 0;
+    pointer-events: none;
+}
+
+.menu-hero-divider img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+/* ---------------------------------------------------------
+   CATEGORY NAV (tab navigation — not sticky)
+   --------------------------------------------------------- */
+.category-nav {
+    background: var(--white);
+    border-bottom: 2px solid var(--cream-dark);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.category-nav__inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-nav__inner::-webkit-scrollbar {
+    display: none;
+}
+
+.category-nav__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.category-nav__link:hover,
+.category-nav__link.active {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+}
+
+.category-nav__link i {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+
+/* ---------------------------------------------------------
+   TAB PANEL VISIBILITY
+   --------------------------------------------------------- */
+.menu-section-block {
+    display: none;
+}
+
+.menu-section-block.is-active {
+    display: block;
+    animation: tabFadeIn 0.32s ease both;
+}
+
+@keyframes tabFadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ---------------------------------------------------------
+   MENU PAGE BODY
+   --------------------------------------------------------- */
+.menu-page {
+    background: var(--cream);
+    padding-bottom: var(--space-xxl);
+}
+
+.menu-page__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+}
+
+
+/* ---------------------------------------------------------
+   DAILY SPECIAL CARD
+   --------------------------------------------------------- */
+.daily-special {
+    margin: var(--space-xl) 0 var(--space-lg);
+    background: linear-gradient(135deg,
+        rgba(211, 84, 0, 0.07) 0%,
+        rgba(241, 196, 15, 0.06) 100%);
+    border: 2px solid var(--orange);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 420px; /* Force exact same height on desktop */
+    box-shadow: 0 8px 32px rgba(211, 84, 0, 0.12);
+    position: relative;
+}
+
+.daily-special::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 8px,
+        rgba(211, 84, 0, 0.025) 8px,
+        rgba(211, 84, 0, 0.025) 9px
+    );
+    pointer-events: none;
+}
+
+.daily-special__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.daily-special__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.daily-special:hover .daily-special__image img {
+    transform: scale(1.05);
+}
+
+.daily-special__body {
+    padding: var(--space-lg) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.daily-special__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: var(--space-sm);
+}
+
+.daily-special__label i {
+    font-size: 1rem;
+}
+
+.daily-special__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+.daily-special__desc {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: var(--space-md);
+}
+
+.daily-special__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.daily-special__price {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.daily-special__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.35em 1em;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+
+/* ---------------------------------------------------------
+   MENU SECTION BLOCKS
+   --------------------------------------------------------- */
+.menu-section-block {
+    margin-bottom: var(--space-xl);
+}
+
+.menu-section-block:last-child {
+    margin-bottom: 0;
+}
+
+.menu-section-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--cream-dark);
+}
+
+.menu-section-heading__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.menu-section-heading__text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.1;
+}
+
+.menu-section-heading__count {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   MENU ITEM ROWS
+   --------------------------------------------------------- */
+.menu-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: var(--space-md);
+    row-gap: 0.2em;
+    padding: var(--space-md) var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    cursor: default;
+}
+
+.menu-item:hover {
+    border-color: var(--cream-dark);
+    box-shadow: var(--shadow-sm);
+    background: #FFFDF9;
+}
+
+.menu-item__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.menu-item__name {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+/* Dietary / spice badges */
+.diet-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    flex-shrink: 0;
+}
+
+.diet-badge--veg {
+    background: #27AE60;
+    color: var(--white);
+}
+
+.diet-badge--spicy {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.diet-badge--spicy-hot {
+    background: #C0392B;
+    color: var(--white);
+}
+
+.menu-item__price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.menu-item__desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Sub-label beneath section (e.g., "Tequila Flights") */
+.menu-sub-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: var(--space-md) var(--space-md) 0.3rem;
+    border-bottom: 1px dashed var(--cream-dark);
+    margin-bottom: 2px;
+}
+
+/* Divider legend key */
+.menu-legend {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--cream-dark);
+}
+
+.menu-legend__title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.menu-legend__item {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+    .menu-hero {
+        background-attachment: scroll;
+        min-height: 38vh;
+    }
+
+    .daily-special {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .daily-special__image {
+        aspect-ratio: 16/9;
+    }
+
+    .daily-special__body {
+        padding: var(--space-md) var(--space-md);
+    }
+
+    .category-nav__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.4rem var(--container-pad);
+        overflow-x: visible;
+    }
+
+    .category-nav__link {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        padding: var(--space-sm) var(--space-sm);
+    }
+
+    .menu-item__name {
+        font-size: 1rem;
+    }
+
+    .menu-item__price {
+        font-size: 1rem;
+    }
+}
